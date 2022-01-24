@@ -1,0 +1,53 @@
+/* ITGlue Document Fix */
+/* Shrink the left sidebar when not hovered */
+.itglue-sidebar {
+    min-width: 1% !important;
+    width: 2% !important;
+    overflow: hidden;
+    transition: width 0.1s !important;
+}
+
+/* Expand the left sidebar when hovered */
+.itglue-sidebar:hover {
+    width: var(--sidebar-open-width) !important;
+    overflow: auto;
+}
+
+/* Make the document content not have a giant left margin */
+.content-body {
+    margin-left: 50px !important;
+}
+/* Make the document content fill as much space as possible. */
+.col-sm-8 {
+    width: 100%
+}
+
+/* Make the sidebar smaller when not hovered */
+.sidebar {
+    min-width: 1% !important;
+    width: 10%;
+    transition: width 0.1s;
+}
+
+/* Make the sidebar bigger when the hovered */
+.sidebar:hover {
+    width: 33%;
+}
+
+/* Make the contents of the sidebar hidden when the sidebar is not hovered */
+.sidebar > * {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.1s linear;
+}
+
+/* Make the contents of the sidebar visible when the sidebar is hovered */
+.sidebar:hover > * {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Remove the Table of Contents pane */
+.toc {
+    display: none;
+}
